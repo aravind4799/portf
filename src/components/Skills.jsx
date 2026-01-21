@@ -191,7 +191,6 @@ export default function Skills() {
 {`master_degree:
   - Master of Science in Computer Science
   - University: Purdue University
-  - Major Concentration: Information & Cybersecurity
   - Campus: West Lafayette
   - Status: Completed
   - GPA: 3.77
@@ -248,7 +247,7 @@ Containerization:
   - Container Image Building & Optimization
 
 Orchestration:
-  - Kubernetes (CKAD Certified - 91% Score)
+  - Kubernetes
   - Helm Charts
   - ArgoCD (GitOps)
   - Deployment Strategies (Rolling, Canary, Blue-Green)

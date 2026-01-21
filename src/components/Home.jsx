@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Header from './Header';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -40,7 +40,7 @@ export default function Home() {
       <div className="w-full  border-gray-200 dark:border-gray-700 py-2">
         <div className="container mx-auto px-6 text-center">
           <p className="font-geist-mono text-gray-500 dark:text-gray-400 text-base text-center">
-            Full Stack Dev | Java | SpringBoot | React | Kubernetes | AWS | Linux
+            Backend Engineer | Java | SpringBoot | Kubernetes | AWS | Linux
           </p>
         </div>
       </div>
@@ -60,14 +60,14 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full md:max-w-4xl mx-auto">
             {/* Block 1: Open to Work */}
             <div className="flex items-center justify-center md:flex-1 w-full md:w-auto">
-              <button 
-                className="font-geist-mono bg-white dark:bg-gray-800 rounded-md px-4 py-2.5 flex items-center gap-2 hover:opacity-90 transition-opacity text-base text-blue-600 dark:text-blue-400 border border-blue-500 dark:border-blue-500"
+              <div 
+                className="font-geist-mono bg-white dark:bg-gray-800 rounded-md px-4 py-2.5 flex items-center gap-2 text-base text-blue-600 dark:text-blue-400 border border-blue-500 dark:border-blue-500"
               >
                 <span className="relative flex items-center justify-center w-2.5 h-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-fade-in-out"></span>
                 </span>
                 Open to Work
-              </button>
+              </div>
             </div>
             
             {/* Block 2: Social Icons */}
