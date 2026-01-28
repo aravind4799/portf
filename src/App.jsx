@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './ThemeContext';
 import Home from './components/Home';
 import About from './components/About';
-import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Work from './components/Work';
 import Blogs from './components/Blogs';
+import GrindPal from './components/GrindPal';
 
 export default function App() {
   return (
@@ -13,9 +14,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/work" element={<Work />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/grindpal" element={<GrindPal />} />
         </Routes>
       </Router>
     </ThemeProvider>

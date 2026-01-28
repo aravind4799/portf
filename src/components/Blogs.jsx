@@ -4,7 +4,7 @@ export default function Blogs() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
       <Header />
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto px-6 py-8 pt-[73px]">
         <div className="max-w-4xl mx-auto font-geist-mono text-gray-700 dark:text-gray-300 space-y-8">
           
 

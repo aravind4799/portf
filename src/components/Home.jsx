@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
       <Header />
-      <main className="container mx-auto px-6 py-4">
+      <main className="container mx-auto px-6 pt-16 pb-4">
         <div className="flex flex-col items-center">
           <img 
             src={theme === 'dark' ? '/profile1.png' : '/profile.png'} 

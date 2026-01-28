@@ -373,13 +373,13 @@ Devops:
                       <span className="text-gray-300">  </span><span className="text-cyan-400">superpower</span><span className="text-gray-300">: </span><span className="text-green-400">Turning "CrashLoopBackOff" into "Running 1/1"</span>{'\n'}
                       <span className="text-gray-300">  </span><span className="text-cyan-400">currentStatus</span><span className="text-gray-300">:</span>{'\n'}
                       <span className="text-gray-300">    - </span><span className="text-green-400">Building at Zentrais</span>{'\n'}
-                      <span className="text-gray-300">    - </span><span className="text-green-400">Grinding LeetCode</span>{'\n'}
+                      <span className="text-gray-300">    - </span><span className="text-green-400">Learning system design and new way of coding. </span>{'\n'}
                       <span className="text-gray-300">    - </span><span className="text-green-400">Breaking & fixing K8s clusters</span>{'\n'}
                       <span className="text-gray-300">  </span><span className="text-cyan-400">loading</span><span className="text-gray-300">: </span><span className="text-green-400">CKA Certification...</span>{'\n'}
                       <span className="text-gray-300">  </span><span className="text-cyan-400">philosophy</span><span className="text-gray-300">: |</span>{'\n'}
-                      <span className="text-gray-300">    </span><span className="text-green-400">I don't throw code over the wall to Ops.</span>{'\n'}
-                      <span className="text-gray-300">    </span><span className="text-green-400">If I write the Spring Boot endpoint, I own the Helm chart</span>{'\n'}
-                      <span className="text-gray-300">    </span><span className="text-green-400">that deploys it and the Prometheus alert that monitors it.</span>
+                      <span className="text-gray-300">    </span><span className="text-green-400">I believe in full-lifecycle ownership. A feature isn't complete when the code is written.</span>{'\n'}
+                      <span className="text-gray-300">    </span><span className="text-green-400">it’s complete when it is securely deployed, easily observable,and delivering value in production.</span>{'\n'}
+                      
                     </pre>
                 </div>
               </div>

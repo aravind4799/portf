@@ -47,8 +47,8 @@ export default function Projects() {
   // Fixed color for Reactor Deployer (blue)
   const reactorColor = { from: 'from-blue-500', to: 'to-cyan-500', border: 'border-blue-400 dark:border-blue-500' };
 
-  // Fixed color for CKAD (gold)
-  const ckadColor = { from: 'from-yellow-500', to: 'to-amber-500', border: 'border-yellow-400 dark:border-yellow-500' };
+  // Fixed color for CKAD (golden orange)
+  const ckadColor = { from: 'from-orange-500', to: 'to-amber-500', border: 'border-orange-400 dark:border-amber-500' };
 
   // Fixed color for GrindPal (orange-red)
   const grindpalColor = { from: 'from-orange-500', to: 'to-red-500', border: 'border-orange-400 dark:border-orange-500' };
@@ -433,6 +433,9 @@ export default function Projects() {
         <h3 className="font-geist-mono text-xl font-semibold text-gray-900 dark:text-white mb-3">
           Haven't explored <span className="text-blue-600 dark:text-blue-400">"{term}"</span> yet!
         </h3>
+        <p className="font-geist-mono text-sm text-gray-600 dark:text-gray-400 italic">
+          "I am not bounded by my tech-stack!"
+        </p>
       </div>
     </div>
   );
@@ -607,7 +610,7 @@ export default function Projects() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
             {filterCategories.map((category) => (
               <button
                 key={category.id}

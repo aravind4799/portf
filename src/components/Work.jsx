@@ -1,76 +1,11 @@
 import Header from './Header';
-
-const experiences = [
-  {
-    id: 1,
-    role: 'Founding Engineer',
-    company: 'Zentrais',
-    location: 'USA',
-    type: 'Part-time',
-    period: 'Oct 2025 - Present',
-    current: true,
-    bullets: [
-      "Spearheaded the development of the company's initial digital presence, engineering the MVP web application from scratch.",
-      "Established development infrastructure from scratch configured CI/CD pipelines with GitLab, integrated CodeRabbit for automated code reviews, and containerized applications with Docker.",
-      "Architected secure data ingestion for 1,000+ users with client-side validations, capturing metrics vital for venture funding."
-    ],
-    techStack: 'Next.js, Node.js, MongoDB, Tailwind CSS, Cursor, CodeRabbit, Resend, GitLab, Vercel'
-  },
-  {
-    id: 2,
-    role: 'Java Backend Developer',
-    company: 'MetLife',
-    location: 'USA',
-    type: 'Co-op',
-    period: 'Jan 2025 - Sept 2025',
-    current: false,
-    bullets: [
-      "Reduced user wait times by 35% by engineering event-driven architecture with Spring Boot and RabbitMQ, decoupling monolithic services from synchronous external APIs into async background workers.",
-      "Achieved 99.9% service availability during API outages by implementing Circuit Breaker patterns with Resilience4j, preventing cascading failures across 3+ dependent microservices.",
-      "Owned notification microservice end-to-end from Spring Boot implementation to Kubernetes deployment on AWS EKS, creating Helm charts for reproducible deployments and configuring pod autoscaling.",
-      "Modernized PHP customer portal by rebuilding the frontend in React and Tailwind CSS using mobile-first design, developing reusable Material-UI components with client-side validation."
-    ],
-    techStack: 'Spring Boot, Microservices, RabbitMQ, Resilience4j, React, Material-UI, Tailwind CSS, Docker, AWS SDK'
-  },
-  {
-    id: 3,
-    role: 'Software Engineer',
-    company: 'CERIAS at Purdue University',
-    location: 'West Lafayette, IN, USA',
-    type: 'Internship',
-    period: 'May 2024 - Aug 2024',
-    current: false,
-    bullets: [
-      "Built a fully responsive React/Tailwind CSS interface with protected routing and Redux, shrinking initial bundle size by ~30%.",
-      "Enforced WCAG AA accessibility with semantic HTML, ARIA roles and 90%+ test coverage using Jest.",
-      "Streamlined legacy backend by tuning MySQL indexes, cutting average page-load latency from 5s to 1s."
-    ],
-    techStack: 'React, Redux, Tailwind CSS, Protected Routing, React.lazy, Jest, MySQL, REST APIs'
-  },
-  {
-    id: 4,
-    role: 'Software Engineer',
-    company: 'LTIMindtree',
-    client: 'Citi Bank',
-    location: 'Chennai, TN, India',
-    type: 'Full-time',
-    period: 'Aug 2021 - May 2023',
-    current: false,
-    bullets: [
-      "Slashed document validation time from 30+ minutes to under 60 seconds by migrating legacy AbInitio pipeline to Spring Boot, implementing 35+ business rules with Java Streams and JPA.",
-      "Improved data processing throughput by 50% by implementing multithreading with Java Executor Service.",
-      "Achieved 80%+ code coverage with JUnit 5 and Mockito, reducing production defects by 30%.",
-      "Reduced database migration planning from 2 days to 15 minutes by building RESTful APIs with OrientDB and delivering an interactive React dashboard for data lineage visualization."
-    ],
-    techStack: 'Java, Spring Boot, React.js, OrientDB, Multithreading, Hibernate/JPA, JUnit, Mockito, SonarQube'
-  }
-];
+import { experiences } from '../data/experiences';
 
 export default function Work() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
       <Header />
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto px-6 py-8 pt-[73px]">
         <div className="max-w-3xl mx-auto font-geist-mono">
           <div className="divide-y divide-gray-200 dark:divide-gray-700">
             {experiences.map((exp) => (
@@ -96,7 +31,7 @@ export default function Work() {
                       ))}
                     </ul>
                     <div className="mt-4 flex flex-wrap gap-1">
-                      {exp.techStack.split(', ').slice(0, 5).map((tech, i) => (
+                      {exp.techStack.split(', ').map((tech, i) => (
                         <span key={i} className="text-sm text-gray-500 dark:text-gray-400 after:content-['·'] after:mx-1 last:after:content-none">
                           {tech}
                         </span>
