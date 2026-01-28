@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../ThemeContext';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
@@ -7,6 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentTime, setCurrentTime] = useState('');
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
 
   // Format time as "Jan 6, 5:06:36 pm cst"
   const formatTime = () => {
@@ -42,8 +43,9 @@ export default function Header() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/skills' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Work', path: '/work' },
+    { name: 'GrindPal', path: '/grindpal' },
     { name: 'Blogs', path: '/blogs' },
   ];
 
@@ -75,10 +77,10 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="sticky top-0 left-0 right-0 z-40 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 min-h-[73px] max-h-[73px] h-[73px] w-full max-w-full overflow-hidden box-border">
-        <div className="w-full max-w-full px-6 h-full flex items-center box-border">
+      <header className="relative w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 min-h-[73px] max-h-[73px] h-[73px] overflow-hidden" style={{ margin: 0, padding: 0 }}>
+        <div className="w-full h-full flex items-center" style={{ margin: 0, paddingLeft: '1rem', paddingRight: '1rem' }}>
           {/* Desktop View */}
-          <div className="hidden md:grid md:grid-cols-3 items-center w-full max-w-full h-full py-4 box-border">
+          <div className="hidden md:grid md:grid-cols-3 items-center w-full max-w-full h-full box-border">
             {/* Name on extreme left */}
             <Link 
               to="/" 
@@ -89,15 +91,22 @@ export default function Header() {
 
             {/* Navigation links centered with theme toggle */}
             <nav className="flex items-center justify-center space-x-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className="font-geist-mono text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors text-base"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`font-geist-mono transition-colors text-base relative ${
+                      isActive 
+                        ? 'text-gray-900 dark:text-white font-semibold' 
+                        : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <button
                 onClick={toggleTheme}
                 className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors focus:outline-none"
@@ -120,7 +129,7 @@ export default function Header() {
           </div>
 
           {/* Mobile View */}
-          <div className="md:hidden flex items-center justify-between w-full max-w-full h-full py-4 box-border">
+          <div className="md:hidden flex items-center justify-between w-full max-w-full h-full box-border">
             {/* Name on left */}
             <Link 
               to="/" 
@@ -214,16 +223,26 @@ export default function Header() {
 
             {/* Navigation Links */}
             <nav className="flex flex-col p-6 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  onClick={closeMenu}
-                  className="font-geist-mono text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors text-base py-2"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    onClick={closeMenu}
+                    className={`font-geist-mono transition-colors text-base py-2 flex items-center gap-3 ${
+                      isActive 
+                        ? 'text-gray-900 dark:text-white font-semibold' 
+                        : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+                    }`}
+                  >
+                    {isActive && (
+                      <span className="w-2 h-2 bg-gray-900 dark:bg-white rounded-full"></span>
+                    )}
+                    <span className={!isActive ? 'ml-5' : ''}>{link.name}</span>
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Timestamp at bottom right */}

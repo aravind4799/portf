@@ -34,9 +34,9 @@ export default function About() {
       <Header />
       
       {/* Navigation - Segmented Control */}
-      <div className="container mx-auto px-6 pt-8">
+      <div className="container mx-auto px-6 pt-8 pb-4">
         <div className="flex flex-row justify-center mb-8 max-w-6xl mx-auto">
-          <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1 gap-1">
+          <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1 gap-1 shadow-sm">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -116,6 +116,144 @@ export default function About() {
                   <br /><br />
                   My strongest assets are Java, Kubernetes and distributed systems. I bridge the gap between application code and operational reliability, ensuring that what I build isn't just functional—it's scalable, observable, and resilient.
                 </p>
+              </div>
+
+              {/* Deep Dive Section - Expandable Details */}
+              <div className="max-w-3xl mx-auto">
+                <div className="space-y-4">
+                  {/* Education Section */}
+                  <details className="group border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <summary className="cursor-pointer font-medium text-base text-gray-900 dark:text-white list-none flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      Education
+                      <span className="text-gray-400 dark:text-gray-500 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <div className="p-4 bg-white dark:bg-gray-900">
+                      <div className="bg-gray-50 dark:bg-gray-800 rounded p-4 font-mono text-sm overflow-x-auto">
+                        <pre className="text-gray-800 dark:text-gray-200">
+{`master_degree:
+  - Master of Science in Computer Science
+  - University: Purdue University
+  - Campus: West Lafayette
+  - Status: Completed
+  - GPA: 3.77
+
+  courses:
+    summer_2023:
+      - CS 50010: Fundamental Principles of Information Security
+      - CS 50011: Introduction to Systems for Information Security
+    
+    fall_2023:
+      - CS 52600: Information Security
+      - CS 52900: Security Analytics
+      - CS 55500: Cryptography
+    
+    spring_2024:
+      - CS 52300: Social Economic Legal Aspects of Security
+      - CS 52700: Software Security
+      - CS 59100: CERIAS Security Seminar
+    
+    fall_2024:
+      - CS 39000: Web Application Development
+      - CS 54100: Database Systems
+      - CS 58000: Algorithm Design Analysis & Implementation
+    
+    spring_2025:
+      - CS 52800: Network Security
+
+bachelor_degree:
+  - Bachelor of Engineering in Computer Science
+  - University: Anna University Chennai
+  - Location: Chennai, India
+  - Status: Completed
+  - Final GPA: 8.7
+  - Courses:
+    - A-Z in Computer Science`}
+                        </pre>
+                      </div>
+                    </div>
+                  </details>
+
+                  {/* Full Stack Development Section */}
+                  <details className="group border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <summary className="cursor-pointer font-medium text-base text-gray-900 dark:text-white list-none flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      Full Stack Development
+                      <span className="text-gray-400 dark:text-gray-500 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <div className="p-4 bg-white dark:bg-gray-900">
+                      <div className="bg-gray-50 dark:bg-gray-800 rounded p-4 font-mono text-sm overflow-x-auto">
+                        <pre className="text-gray-800 dark:text-gray-200">
+{`Backend:
+  - Java (Spring Boot)
+  - Node.js (NestJS, TypeScript)
+  - Python (Flask)
+  - RESTful APIs
+  - Microservices Architecture
+  - Message Queues (RabbitMQ)
+
+Frontend:
+  - React
+  - Next.js
+  - Redux
+  - TypeScript/JavaScript
+  - Tailwind CSS
+
+Databases:
+  - PostgreSQL
+  - MySQL
+  - MongoDB
+  - `}
+                        </pre>
+                      </div>
+                    </div>
+                  </details>
+
+                  {/* Cloud & DevOps Section */}
+                  <details className="group border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                    <summary className="cursor-pointer font-medium text-base text-gray-900 dark:text-white list-none flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      Cloud & DevOps
+                      <span className="text-gray-400 dark:text-gray-500 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <div className="p-4 bg-white dark:bg-gray-900">
+                      <div className="bg-gray-50 dark:bg-gray-800 rounded p-4 font-mono text-sm overflow-x-auto">
+                        <pre className="text-gray-800 dark:text-gray-200">
+{`Cloud:
+  - AWS (EC2, S3, EKS, IAM, VPC, SQS, Lambda, DynamoDB, Gateway)
+  - Cloud Infrastructure
+
+Containerization:
+  - Docker
+  - Container Image Building & Optimization
+
+Orchestration:
+  - Kubernetes
+  - Helm Charts
+  - ArgoCD (GitOps)
+  - Deployment Strategies (Rolling, Canary, Blue-Green)
+
+Kubernetes_core:
+  - Deployments, ReplicaSets, Pods
+  - Services (ClusterIP, NodePort, LoadBalancer)
+  - Ingress Controllers & Routing
+  - ConfigMaps & Secrets
+  - ServiceAccounts, RBAC (Roles & RoleBindings)
+  - Network Policies
+  - Resource Management (Requests/Limits)
+  - Health Probes (Liveness, Readiness, Startup)
+  - Jobs & CronJobs
+  - Init Containers & Multi-Container Pods
+  - PersistentVolumes & PersistentVolumeClaims
+  - StatefulSets & DaemonSets
+
+Devops:
+  - CI/CD Pipelines
+  - GitOps
+  - Monitoring & Logging
+  - Observability`}
+                        </pre>
+                      </div>
+                    </div>
+                  </details>
+                </div>
               </div>
 
               {/* Core Competencies */}
