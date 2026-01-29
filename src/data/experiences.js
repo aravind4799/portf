@@ -8,7 +8,7 @@ export const experiences = [
     role: 'Founding Engineer',
     company: 'Zentrais',
     location: 'USA',
-    type: 'Part-time',
+    type: 'Freelance',
     period: 'Oct 2025 - Present',
     current: true,
     bullets: [
@@ -24,9 +24,9 @@ export const experiences = [
     role: 'Java Backend Developer',
     company: 'MetLife',
     location: 'USA',
-    type: 'Co-op',
-    period: 'Jan 2025 - Sept 2025',
-    current: false,
+    type: 'Contract',
+    period: 'Jan 2025 - Present',
+    current: true,
     bullets: [
       "Reduced user wait times by 35% by engineering event-driven architecture with Spring Boot and RabbitMQ, decoupling monolithic services from synchronous external APIs into async background workers.",
       "Achieved 99.9% service availability during API outages by implementing Circuit Breaker patterns with Resilience4j, preventing cascading failures across 3+ dependent microservices.",
